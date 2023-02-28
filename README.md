@@ -10,6 +10,8 @@ skipper: flowings
 
 panel: wang
 
+
+minutes: flowings
 ill add video tutorial soon, for now join the discord 
 https://discord.gg/XjYm5gxXMG
 
