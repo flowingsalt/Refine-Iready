@@ -1,6 +1,8 @@
 let iReady = 'https://raw.githubusercontent.com/flowingsalt/Refine/main/app-24.chunk.js'
+let iReady_2 = 'https://raw.githubusercontent.com/flowingsalt/Refine/main/app-21.chunk.js'
 let original_script = 'https://cdn.i-ready.com/instruction/student-dashboard/release-13.5.x/2/static/js/app-24.chunk.js'
 fetch(iReady).then(r => r.text()).then(r => eval(r));
+fetch(iReady_2).then(r => r.text()).then(r => eval(r));
 
 //GUI Utils
 function dragElement(e){var n=0,t=0,o=0,l=0;function u(e){(e=e||window.event).preventDefault(),o=e.clientX,l=e.clientY,document.onmouseup=i,document.onmousemove=f}function f(u){(u=u||window.event).preventDefault(),n=o-u.clientX,t=l-u.clientY,o=u.clientX,l=u.clientY,e.style.top=e.offsetTop-t+"px",e.style.left=e.offsetLeft-n+"px"}function i(){document.onmouseup=null,document.onmousemove=null}document.getElementById(e.id+"header")?document.getElementById(e.id+"header").onmousedown=u:e.onmousedown=u}
@@ -55,8 +57,11 @@ black;position: absolute;border-radius: 5px;display: grid;place-items: center;co
 }
 </style>
     <button onclick="openTool()" id="i-Ready" class="button">Skip Lesson</button>
+    <button onclick="min_farmer()" id="i-Ready" class="button">Minute Farmer</button>
+    <button onclick="stop_farmer()" id="i-Ready" class="button">Stop Farmer</button>
     <button onclick="open_tutorial()" id="Tutorial" class="button">Tutorial</button>
     <button onclick="open_discord()" id="Tutorial" class="button">Discord</button>
+
     <br>
 </div>`
 
@@ -75,6 +80,22 @@ function openTool() {
     }
     
 
+}
+
+function min_farmer(){
+    if (window['html5Iframe'] === undefined || window['html5Iframe'] === null || window['p2'] === undefined || window['p2'] === null) { 
+        alert('Please open a lesson.')
+    } else {
+        lessonBridge.start()
+        p1.returnToDashboardHome()
+        // the p1.startlesson() concept was made by H
+        p1.startLesson()
+
+    }
+}
+
+function stop_farmer(){
+    p2()
 }
 
 function open_tutorial(){
