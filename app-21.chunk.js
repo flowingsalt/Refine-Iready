@@ -2779,6 +2779,9 @@ function a20_0x1510() {
                                     'default': _0x452a09
                                 };
                                 }
+                                window.p3 = function(){
+                                    return _0x7263c5['bRsJV'](_0x4bcdf6, new _0x28b389());
+                                }
                                 return _0x7263c5['bRsJV'](_0x4bcdf6, new _0x28b389());
                             }
                             , 'componentPause': function () {
